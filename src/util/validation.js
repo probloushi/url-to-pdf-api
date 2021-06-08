@@ -32,7 +32,7 @@ const sharedQuerySchema = Joi.object({
   cookies: Joi.array().items(cookieSchema),
   output: Joi.string().valid(['pdf', 'screenshot', 'html']),
   'viewport.width': Joi.number().min(1).max(30000),
-  'viewport.height': Joi.number().min(1).max(30000),
+  'viewport.height': Joi.number().min(1).max(300),
   'viewport.deviceScaleFactor': Joi.number().min(0).max(100),
   'viewport.isMobile': Joi.boolean(),
   'viewport.hasTouch': Joi.boolean(),
